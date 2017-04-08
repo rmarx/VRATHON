@@ -2,3 +2,7 @@
 Library/
 VRATHON.csproj
 VRATHON.sln
+Assets/SteamVR/InteractionSystem/
+VRATHON.Editor.csproj
+Assets/SteamVR/Scenes/example.unity
+Assets/SteamVR/Scenes/example.unity.meta

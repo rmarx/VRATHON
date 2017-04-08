@@ -49,7 +49,7 @@ public class TestScript : MonoBehaviour
 
             yield return new WaitForSeconds(1.0f);
 
-            GameObject.Destroy(this.gameObject);
+            //GameObject.Destroy(this.gameObject);
         }
     }
 }
