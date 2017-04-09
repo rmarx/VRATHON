@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GravityApplier : MonoBehaviour
+public class GravityApplierVR : MonoBehaviour
 {
     public Rigidbody rigidbody = null;
     public GameObject hitIndicator = null;
 
     // Use this for initialization
-    void Start ()
+    void Start()
     {
         rigidbody = GetComponent<Rigidbody>();
         rigidbody.useGravity = false;
@@ -28,10 +28,10 @@ public class GravityApplier : MonoBehaviour
     private bool hasTargetRotation = false;
     private Quaternion targetRotation;
 
-    private Transform immediateTransformer; 
+    private Transform immediateTransformer;
 
     // Update is called once per frame
-    void Update ()
+    void Update()
     {
         /*
         if (Input.GetKeyDown(KeyCode.Space))
@@ -109,7 +109,7 @@ public class GravityApplier : MonoBehaviour
         float gravitySize = -9.81f;
         //Debug.Log(gravitySize + " // " + transform.up);
 
-        if ( rotate )
+        if (rotate)
         {
             //GetComponent<Rigidbody>().velocity = Vector3.zero;
             //Vector3 angles = this.transform.eulerAngles;
@@ -183,14 +183,14 @@ public class GravityApplier : MonoBehaviour
 
         if (up)
         {
-            if( Mathf.Abs(rigidbody.velocity.x) < 30 )
+            if (Mathf.Abs(rigidbody.velocity.x) < 30)
                 GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * 20, ForceMode.Acceleration);
             //rigidbody.angularVelocity = Vector3.zero;
             //rigidbody.velocity = rigidbody.velocity + (-Vector3.right * 30 * Time.fixedDeltaTime);
         }
-        if (down) 
+        if (down)
         {
-            if ( Mathf.Abs(rigidbody.velocity.x) < 30)
+            if (Mathf.Abs(rigidbody.velocity.x) < 30)
                 GetComponent<Rigidbody>().AddRelativeForce(-Vector3.forward * 20, ForceMode.Acceleration);
             //rigidbody.angularVelocity = Vector3.zero;
             //rigidbody.velocity = rigidbody.velocity + (Vector3.right * 30 * Time.fixedDeltaTime);
@@ -239,7 +239,7 @@ public class GravityApplier : MonoBehaviour
             jump = false;
         }
 
-        
+
         //Debug.Log(rigidbody.velocity + " // " + this.transform.right + " // " + this.transform.TransformDirection(this.transform.right) + " // " + projection + "// " + " // " + this.transform.InverseTransformDirection(projection) + " // " + projection.magnitude);
 
         //projection.x 
