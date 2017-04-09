@@ -209,6 +209,7 @@ public class GravityApplierVR : MonoBehaviour
 		{
 			pulling = false;
 
+			/*
 			if (pullTowardNormal == this.transform.up)
 			{
 				// user lashed himself to the current running surface. This doesn't react as the others do, but initiates a jump!
@@ -216,6 +217,7 @@ public class GravityApplierVR : MonoBehaviour
 			}
 			else
 			{
+			*/
 				Vector3 pullDirection = pullToward - this.transform.position;
 
 				Vector3 pullProjection = Vector3.Project(pullDirection, this.transform.right);
@@ -241,7 +243,7 @@ public class GravityApplierVR : MonoBehaviour
 				} 
 
 				GetComponent<Rigidbody>().AddForce(movementDirection, ForceMode.VelocityChange);  
-			}
+			//}
 
 			//Debug.LogWarning("VELOCITY : " + rigidbody.velocity);
 
